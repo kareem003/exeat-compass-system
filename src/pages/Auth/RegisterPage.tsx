@@ -40,7 +40,7 @@ const RegisterPage: React.FC = () => {
     }
     
     if (!studentId.trim()) {
-      errors.studentId = 'Student ID is required';
+      errors.studentId = 'Matriculation Number is required';
     }
     
     setFormErrors(errors);
@@ -102,10 +102,10 @@ const RegisterPage: React.FC = () => {
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="studentId">Student ID</Label>
+                <Label htmlFor="studentId">Matriculation Number</Label>
                 <Input
                   id="studentId"
-                  placeholder="VU123456"
+                  placeholder="VUG/CSC/20/1234"
                   value={studentId}
                   onChange={(e) => setStudentId(e.target.value)}
                   className={formErrors.studentId ? 'border-red-500' : ''}
