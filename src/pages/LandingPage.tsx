@@ -77,14 +77,14 @@ const LandingPage: React.FC = () => {
               Secure and efficient campus exit permission management for students and staff
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link to={isAuthenticated ? getDashboardLink() : '/login'}>
-                <Button size="lg" className="bg-white text-exeat-primary hover:bg-white/90 px-8 py-4 text-lg">
+              <Link to={isAuthenticated ? getDashboardLink() : '/login'} className="inline-block">
+                <Button size="lg" className="bg-white text-exeat-primary hover:bg-white/90 px-8 py-4 text-lg w-full sm:w-auto">
                   {isAuthenticated ? 'Go to Dashboard' : 'Get Started'}
                 </Button>
               </Link>
               {!isAuthenticated && (
-                <Link to="/register">
-                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-exeat-primary px-8 py-4 text-lg">
+                <Link to="/register" className="inline-block">
+                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-exeat-primary px-8 py-4 text-lg w-full sm:w-auto">
                     Register Now
                   </Button>
                 </Link>
@@ -144,13 +144,13 @@ const LandingPage: React.FC = () => {
               Join the secure exeat permission system today
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link to="/login">
-                <Button size="lg" className="bg-white text-exeat-primary hover:bg-white/90 px-8 py-4">
+              <Link to="/login" className="inline-block">
+                <Button size="lg" className="bg-white text-exeat-primary hover:bg-white/90 px-8 py-4 w-full sm:w-auto">
                   Log In Now
                 </Button>
               </Link>
-              <Link to="/register">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-exeat-primary px-8 py-4">
+              <Link to="/register" className="inline-block">
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-exeat-primary px-8 py-4 w-full sm:w-auto">
                   Create Account
                 </Button>
               </Link>
@@ -164,12 +164,6 @@ const LandingPage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
-                <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4 text-white">
-                  <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M9 22V12h6v10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </div>
               <div>
                 <span className="text-base font-bold text-white">Veritas Exeat System</span>
               </div>
